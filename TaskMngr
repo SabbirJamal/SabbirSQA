@@ -36,24 +36,10 @@ public class TaskController {
 		}
 		return this.taskEntityManager.deleteByIdAndOwner(projectId, ownerId);
 	}
-
-	/**
-	 * Saves a project into the db
-	 * 
-	 * @param project
-	 *            {@link Task}
-	 */
 	public void saveTask(final Task project) {
 
 		this.taskEntityManager.create(project);
 	}
-
-	/**
-	 * Updates a project in the db
-	 * 
-	 * @param project
-	 *            {@link Task}
-	 */
 	public void updateTask(final Task project) {
 
 		this.taskEntityManager.edit(project);
